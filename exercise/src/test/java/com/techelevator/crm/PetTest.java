@@ -11,12 +11,11 @@ public class PetTest {
         ArrayList<String> vaccines = new ArrayList<String>();
         assertEquals("should return empty list for no vaccines", "", toTest.listVaccinations());
         vaccines.add("mmr");
+        toTest.setVaccinations(vaccines);
+        assertEquals("Should return only one vaccine: ", "mmr", toTest.listVaccinations());
         vaccines.add("polio");
         vaccines.add("flu");
         toTest.setVaccinations(vaccines);
-        assertEquals("should return no comma at end", "mmr, polio, flu", toTest.listVaccinations());
-
-
-
+        assertEquals("Should return expected: ", "mmr, polio, flu", toTest.listVaccinations());
     }
 }

@@ -38,7 +38,6 @@ public class Pet {
     public String listVaccinations(){
         String words = "";
         if(vaccinations.size()> 0) {
-
             for (String vaccines : vaccinations)
                 words += vaccines + ", ";
             return words.substring(0, words.length() - 2);
